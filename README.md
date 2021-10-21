@@ -31,6 +31,8 @@ WEBPACK 5, Redux toolkit, Emotion storybook react-router-dom
 
 ---
 
+##### problems adding emotionjs with storybook.
+
 In order to add Emotion to the project and make it work corectly with Storybook
 we need to modify the Storybook Webpack configuration by adding a webpackFinal Method to the object that is being return by the main.js file in the.storybook folder.
 
@@ -78,3 +80,13 @@ after making thes to configurations we can add the decorator to the .storybook/p
     +   addDecorator(EmotionThemeProvider);
 
     // rest of file....
+
+---
+
+#### Header component
+
+For this Project we will build a very simple Header components.
+The Header component has 3 main components.
+Menu, Hamburger, Logo
+
+This can be previewed using storybook.
