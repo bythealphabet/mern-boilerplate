@@ -26,8 +26,8 @@ WEBPACK 5, Redux toolkit, Emotion storybook react-router-dom
 
 #### Storybook setup
 
-npx sb init
-yarn storybook
+    npx sb init
+    yarn storybook
 
 ---
 
