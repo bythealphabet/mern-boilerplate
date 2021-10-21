@@ -1,8 +1,8 @@
-import React from 'react'
- 
-function App(){
- 
-return <div>Lets Start Building</div>
- 
+import React from "react";
+import { hot } from "react-hot-loader/root";
+
+function App() {
+  return <h1>LETS GOOOO!!!!</h1>;
 }
-export default App
+
+export default hot(App);
