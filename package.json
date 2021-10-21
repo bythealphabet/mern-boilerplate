@@ -11,7 +11,9 @@
     "update": "npm run clean && ",
     "dev": "nodemon",
     "build": "webpack --config ./build-utils/webpack.prod.js && webpack --mode=production --config ./build-utils/webpack.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -20,6 +22,10 @@
     "@babel/preset-react": "^7.14.5",
     "@emotion/babel-plugin": "^11.3.0",
     "@hot-loader/react-dom": "^17.0.1",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "babel-loader": "^8.2.3",
     "file-loader": "^6.2.0",
     "nodemon": "^2.0.14",
