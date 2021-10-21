@@ -1,0 +1,46 @@
+Arguments: 
+  /usr/local/bin/node /usr/bin/yarn dev
+
+PATH: 
+  /home/isaac/.deno/bin:/home/isaac/.deno/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/isaac/go/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.18.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/isaac/projects/project-templates/mern-boilerplate/package.json: Unexpected token } in JSON at position 735
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "mern-boilerplate",
+    "version": "1.0.0",
+    "description": "a boilerplate build with REACT, NODE, EXPRESS, and, MongoDB. That has WEBPACK 5, Redux, toolkit, Emotionjs, Emotionjs themes, and basic user authentications in server logic and client UI. in play ES6.",
+    "main": "server/server.js",
+    "repository": "git@github.com:bythealphabet/mern-boilerplate.git",
+    "author": "Dudley Isaac Lucas",
+    "license": "MIT",
+    "scripts": {
+      "clean": "rimraf ./dist",
+      "update": "npm run clean && ",
+      "dev": "nodemon",
+      "build": "webpack --config ./build-utils/webpack.prod.js && webpack --mode=production --config ./build-utils/webpack.server.js",
+      "start": "NODE_ENV=production node ./dist/server.generated.js"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

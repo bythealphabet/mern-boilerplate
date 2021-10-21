@@ -5,5 +5,46 @@
   "main": "server/server.js",
   "repository": "git@github.com:bythealphabet/mern-boilerplate.git",
   "author": "Dudley Isaac Lucas",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "update": "npm run clean && ",
+    "dev": "nodemon",
+    "build": "webpack --config ./build-utils/webpack.prod.js && webpack --mode=production --config ./build-utils/webpack.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@emotion/babel-plugin": "^11.3.0",
+    "@hot-loader/react-dom": "^17.0.1",
+    "babel-loader": "^8.2.3",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.14",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.1",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.5.0",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
+    "react-router-dom": "^5.3.0"
+  }
 }
