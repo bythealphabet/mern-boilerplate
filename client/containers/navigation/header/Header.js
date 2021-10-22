@@ -14,22 +14,32 @@ function Header() {
   }, [location]);
 
   return (
-    <div className="base-grid" css={headerStyles}>
+    <header className="base-grid" css={headerStyles}>
       <Logo
+        active={active}
         position={css`
           grid-column: 2 / span 2;
+          grid-row: 1 / -1;
+          margin-top: 0.3em;
         `}
       />
-      <Menu />
+      <Menu
+        active={active}
+        position={css`
+          grid-column: 1 / -1;
+          grid-row: 1 / -1;
+        `}
+      />
       <Hamburger
         active={active}
         setActive={setActive}
         position={css`
           grid-column: -3;
           align-self: center;
+          grid-row: 1 / -1;
         `}
       />
-    </div>
+    </header>
   );
 }
 export default Header;
@@ -38,6 +48,8 @@ export default Header;
 
 function headerStyles() {
   return css`
+    display: grid;
+    grid-template-rows: repeat(2, calc(var(--headerHeight) / 2));
     height: var(--headerHeight);
     grid-column: 1 / -1;
     grid-row: 1;

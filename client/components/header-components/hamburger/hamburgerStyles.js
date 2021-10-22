@@ -1,7 +1,9 @@
 import { jsx, css, keyframes } from "@emotion/react"; /** @jsx jsx */
 
-export function hamburgerStyles() {
+export function hamburgerStyles(active) {
+  console.log("active", active);
   return css`
+    z-index: 10;
     width: 30px;
     height: 25px;
     border: transparent;
@@ -9,10 +11,11 @@ export function hamburgerStyles() {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: 2ms ease;
 
     span {
-      background: #000;
-      border: solid 0.5px #000;
+      background: ${active ? "#ffff" : "var(--dark)"};
+      border: solid 0.5px ${active ? "#ffff" : "var(--dark)"};
       border-radius: 3px;
       display: block;
       height: 0.2em;

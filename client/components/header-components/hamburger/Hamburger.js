@@ -7,7 +7,7 @@ export function Hamburger({ active = true, setActive, position }) {
 
   return (
     <div
-      css={[hamburgerStyles(), position]}
+      css={[hamburgerStyles(active), position]}
       onClick={() => setActive((prev) => !prev)}
     >
       <span css={topBun}></span>

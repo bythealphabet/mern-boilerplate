@@ -14,7 +14,11 @@ const ScrollToTop = withRouter(scrollToTop);
 function mainRouterStyles() {
   return css`
     display: grid;
-    grid-template-rows: var(--headerHeight) auto var(--footerHeight);
+    grid-template-rows:
+      var(--headerHeight) calc(
+        100vh - var(--headerHeight) + var(--footerHeight)
+      )
+      var(--footerHeight);
   `;
 }
 
@@ -33,7 +37,7 @@ function MainRouter() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </ScrollToTop>
     </div>
   );

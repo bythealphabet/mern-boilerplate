@@ -14,6 +14,8 @@ export function GlobalStyles() {
         :root {
           --headerHeight: 100px;
           --footerHeight: 100px;
+          --dark: #515151;
+          --accent: #009e8f;
         }
 
         body,
@@ -21,7 +23,7 @@ export function GlobalStyles() {
           margin: 0;
           font-family: "Alata", sans-serif;
           font-size: 1rem;
-          color: #404040;
+          color: #515151;
           line-height: 1.6;
           background-color: #ffff;
         }
@@ -34,6 +36,24 @@ export function GlobalStyles() {
         a {
           text-decoration: none;
           color: #404040;
+        }
+
+        ////////////BUTTONS
+        .btn {
+          display: inline-block;
+          padding: 0.5em 1.2em;
+          font-size: 0.8rem;
+          font-weight: bold;
+          border: solid 0.2em var(--dark);
+          background: var(--white);
+          cursor: pointer;
+          border-radius: 0.25em;
+
+          :hover,
+          :focus {
+            color: var(--accent);
+            background: var(--dark);
+          }
         }
 
         /////GRID LAYOUT
