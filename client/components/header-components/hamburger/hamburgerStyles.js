@@ -1,6 +1,6 @@
 import { jsx, css, keyframes } from "@emotion/react"; /** @jsx jsx */
 
-export function hamburgerStyles(active) {
+export function hamburgerStyles() {
   return css`
     width: 30px;
     height: 25px;
@@ -25,7 +25,6 @@ export function hamburgerStyles(active) {
 }
 
 export function hamburgerAnimations(active) {
-  console.log("active in burger anime", active);
   const topBun = keyframes`
  	  	0% {
  			transform: translate(0, ${active ? 0 : 9}px) rotate(${active ? 0 : 45}deg);
@@ -54,17 +53,25 @@ export function hamburgerAnimations(active) {
 
   const meat = keyframes`
     0% {
-      transform: translate(0, ${active ? 0 : -9}px)
-        rotate(${active ? 0 : -45}deg);
+      transform: scale(${active ? 1 : 0})
     }
     60% {
-      transform: translate(0, -9px);
+      transform: scale(.5)
     }
 
     100% {
-      transform: translate(0, ${active ? -8.5 : 0}px)
-        rotate(${active ? -45 : 0}deg);
+      transform: scale(${active ? 0 : 1})
     }
   `;
-  return { topBun, meat, bottomBun };
+  return {
+    topBun: css`
+      animation: ${topBun} 0.2s ease-in-out forwards;
+    `,
+    meat: css`
+      animation: ${meat} 0.2s ease-in-out forwards;
+    `,
+    bottomBun: css`
+      animation: ${bottomBun} 0.2s ease-in-out forwards;
+    `,
+  };
 }

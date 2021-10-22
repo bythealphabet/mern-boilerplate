@@ -81,6 +81,14 @@ after making thes to configurations we can add the decorator to the .storybook/p
 
     // rest of file....
 
+Now I have to add react-router-dom to storybook, by adding a decorator with the MemoryROuter from react-router-dom, into the .storybook/preview.js file.
+
+    import { MemoryRouter } from "react-router";
+
+        addDecorator(story => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>);
+
+---
+
 ---
 
 #### Header component

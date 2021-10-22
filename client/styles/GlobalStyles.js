@@ -12,7 +12,7 @@ export function GlobalStyles() {
         }
 
         :root {
-          --headerHeight: 150px;
+          --headerHeight: 100px;
           --footerHeight: 100px;
         }
 
