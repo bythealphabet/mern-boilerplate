@@ -17,8 +17,8 @@ function Home() {
 
         <p className="link">
           link to the template 👇
-          <a href="git@github.com:bythealphabet/mern-boilerplate.git">
-            git@github.com:bythealphabet/mern-boilerplate.git
+          <a href="https://github.com/bythealphabet/mern-boilerplate.git">
+            https://github.com/bythealphabet/mern-boilerplate.git
           </a>
         </p>
         <p>Hope you like it,</p>
@@ -92,7 +92,7 @@ function homeStyle() {
       text-align: right;
 
       @media (min-width: 900px) {
-        margin-right: 1em;
+        margin: 2em;
         grid-column: span 2 / -1;
       }
 
