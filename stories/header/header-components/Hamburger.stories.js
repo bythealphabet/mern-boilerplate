@@ -1,5 +1,5 @@
 import React from "react";
-import { Hamburger } from "../../../client/components/header-components/hamburger/Hamburger";
+import { Hamburger } from "../../../client/components/header/hamburger/Hamburger";
 
 export default {
   title: "Header/Components/Hamburger",

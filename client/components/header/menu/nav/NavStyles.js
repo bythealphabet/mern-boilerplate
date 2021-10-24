@@ -42,10 +42,19 @@ export function navStyle() {
           padding: 0.5em 1.2em;
           font-size: 0.8rem;
           font-weight: bold;
-          border: solid 0.2em var(--dark);
+          text-align: center;
+
           background: var(--white);
+          color: var(--accent);
           cursor: pointer;
           border-radius: 0.25em;
+          width: 100%;
+          margin: 0.5em 0;
+
+          @media (min-width: 900px) {
+            border: solid 0.2em var(--dark);
+            background: transparent;
+          }
 
           :hover,
           :focus {
@@ -55,6 +64,8 @@ export function navStyle() {
         }
 
         .nav-btn-signup {
+          background: var(--accent);
+          color: var(--white);
           :hover,
           :focus {
             color: var(--accent);

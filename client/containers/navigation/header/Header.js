@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { jsx, css } from "@emotion/react"; /** @jsx jsx */
 import { useLocation } from "react-router-dom";
-import { Hamburger } from "../../../components/header-components/hamburger/Hamburger";
+import { Hamburger } from "../../../components/header/hamburger/Hamburger";
 import { Logo } from "../../../components/logo/Logo";
-import { Menu } from "../../../components/header-components/menu/Menu";
+import { Menu } from "../../../components/header/menu/Menu";
 
 function Header() {
   const [active, setActive] = useState(false);

@@ -98,3 +98,23 @@ The Header component has 3 main components.
 Menu, Hamburger, Logo
 
 This can be previewed using storybook.
+
+The logo Components is just a placehoder for now,
+The Hamburger button has animations.
+Menu is set as a column with a different font-size, color and background-color for the mobile view.
+
+---
+
+---
+
+### Oct 21.
+
+- Signup Page
+- Server Signup logic
+- Confirmation Page
+- Signin Page
+- Server Signin logic
+
+---
+
+In order to maintain users authentication state, Im using Context to pass they current user authentication to the Header Component, to the Signin and Signup Components, and to the Future Private Component.

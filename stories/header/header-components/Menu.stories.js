@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu } from "../../../client/components/header-components/menu/Menu";
+import { Menu } from "../../../client/components/header/menu/Menu";
 
 export default {
   title: "Header/Components/Menu",

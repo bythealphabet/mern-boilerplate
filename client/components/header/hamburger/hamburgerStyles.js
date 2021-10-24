@@ -1,7 +1,6 @@
 import { jsx, css, keyframes } from "@emotion/react"; /** @jsx jsx */
 
 export function hamburgerStyles(active) {
-  console.log("active", active);
   return css`
     z-index: 10;
     width: 30px;

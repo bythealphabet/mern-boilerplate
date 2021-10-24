@@ -15,7 +15,9 @@ export function GlobalStyles() {
           --headerHeight: 100px;
           --footerHeight: 100px;
           --dark: #515151;
+          --blue: rgba(81, 127, 164, 1);
           --accent: #009e8f;
+          --white: #ffff;
         }
 
         body,

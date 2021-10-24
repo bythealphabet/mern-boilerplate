@@ -7,7 +7,13 @@ import scrollToTop from "./hooks/scrollToTop";
 import Header from "./containers/navigation/header/Header";
 import Footer from "./containers/navigation/footer/Footer";
 
+//CORE
 import Home from "./containers/core/Home";
+
+//USER
+import Signup from "./containers/user/Signup";
+import Signin from "./containers/user/Signin";
+import Confirmation from "./containers/user/Confirmation";
 
 const ScrollToTop = withRouter(scrollToTop);
 
@@ -35,6 +41,15 @@ function MainRouter() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/user-auth-confirmation/:token">
+            <Confirmation />
+          </Route>
+          <Route path="/signin">
+            <Signin />
           </Route>
         </Switch>
         {/* <Footer /> */}

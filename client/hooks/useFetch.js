@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { abortFetch } from "../api/api-shop";
 
 const controller = new AbortController();
 

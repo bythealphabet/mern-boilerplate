@@ -19,12 +19,12 @@ export function Nav({ position }) {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link className="nav-btn" to="/sign-in">
+          <Link className="nav-btn" to="/signin">
             Sign In
           </Link>
         </li>
         <li>
-          <Link className="nav-btn nav-btn-signup" to="/sign-up">
+          <Link className="nav-btn nav-btn-signup" to="/signup">
             Sign up
           </Link>
         </li>
