@@ -118,3 +118,6 @@ Menu is set as a column with a different font-size, color and background-color f
 ---
 
 In order to maintain users authentication state, Im using Context to pass they current user authentication to the Header Component, to the Signin and Signup Components, and to the Future Private Component.
+
+The authentication data is saved in the browser cookie and in the browsers local-storage.
+the auth-helpers file. has the methods to add the data to the local-storage and cookies and also to get the data, and delete the data when the user signs out of the app.
