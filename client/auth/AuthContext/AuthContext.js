@@ -46,6 +46,7 @@ function AuthProvider({ children }) {
   }
 
   async function signInHandler(data) {
+    console.log("data", data);
     await authenticate(data);
     await setAuth(data);
 

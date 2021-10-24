@@ -4,7 +4,7 @@ import AuthFormComponent from "../../components/form/AuthFormComponent";
 import SubmitSuccess from "../../components/form/SubmitSucces/SubmitSuccess";
 import { AuthContext } from "../../auth/AuthContext/AuthContext";
 import { usePost } from "../../hooks/useFetch";
-import { Link, useHistory, Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { signin } from "../../auth/api-auth";
 
 function SignIn() {
@@ -22,6 +22,7 @@ function SignIn() {
       const userData = await onSubmit(signin, data);
       await setTimeout(() => {
         signInHandler(userData);
+        history.goBack();
       }, 2000);
     } catch (err) {
       console.log("Sign In Error", err);
