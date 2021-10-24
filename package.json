@@ -38,6 +38,7 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.5.0",
+    "@sendgrid/mail": "^7.5.0",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
