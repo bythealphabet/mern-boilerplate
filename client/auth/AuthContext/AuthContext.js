@@ -3,7 +3,7 @@ import authFile from "./auth-helper";
 
 const { isAuthenticated, authenticate, signout, updateAuthUser } = authFile;
 
-export const AuthContext = createContext({});
+export const AuthContext = createContext(isAuthenticated);
 
 function AuthProvider({ children }) {
   const [auth, setAuth] = useState(isAuthenticated);

@@ -37,13 +37,41 @@ export function navStyle() {
           }
         }
 
-        .nav-btn {
+        .nav-btn,
+        .nav-btn-signout {
+          cursor: pointer;
           display: inline-block;
           padding: 0.5em 1.2em;
           font-size: 0.8rem;
-          font-weight: bold;
+          font-weight: 700;
           text-align: center;
+        }
 
+        .nav-btn-signout {
+          width: 110px;
+          display: flex;
+          align-items: center;
+          padding: 0;
+          color: var(--white);
+          margin-top: 1em;
+          p {
+            font-size: 1.5rem;
+          }
+
+          svg {
+            fill: salmon;
+          }
+
+          @media (min-width: 900px) {
+            color: var(--dark);
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .nav-btn {
           background: var(--white);
           color: var(--accent);
           cursor: pointer;

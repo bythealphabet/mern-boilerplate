@@ -90,10 +90,10 @@ function homeStyle() {
       grid-row: -2;
       align-self: flex-end;
       text-align: right;
+      margin: 2em;
 
       @media (min-width: 900px) {
-        margin: 2em;
-        grid-column: span 2 / -1;
+        grid-column: span 4 / -1;
       }
 
       span {

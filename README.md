@@ -4,23 +4,25 @@
 
 ## Main Goal of this Project
 
-This is a boilerplate project build with **MERN STACK**.
-The main goal is to have a basic template to work on with user authentication and, state handeling with Redux.
+This boilerplate project was built with **MERN STACK**.
+The main goal is to have a basic template to work on with user authentication.
 Ready to start other bigger projects.
 
 ### Main packages
 
-REACT, NODE, EXPRESS, and, MongoDB.
+REACT, NODE, EXPRESS and, MongoDB.
 
 ### Packages
 
-WEBPACK 5, Redux toolkit, Emotion storybook react-router-dom
+Webpack 5, Emotion storybook react-router-dom
+
+---
 
 ---
 
 ### Oct 21.
 
-- started project.
+- started the project.
 - added basic folders and files.
 - added storybook
 
@@ -33,8 +35,8 @@ WEBPACK 5, Redux toolkit, Emotion storybook react-router-dom
 
 ##### problems adding emotionjs with storybook.
 
-In order to add Emotion to the project and make it work corectly with Storybook
-we need to modify the Storybook Webpack configuration by adding a webpackFinal Method to the object that is being return by the main.js file in the.storybook folder.
+In order to add Emotion to the project and make it work correctly with Storybook,
+we need to modify the Storybook Webpack configuration by adding a webpackFinal Method to the object that is being returned by the main.js file in the .storybook folder.
 
     -    module.exports = {
     -    stories: [
@@ -72,7 +74,7 @@ the .storybook folder. with the following code.
 
     export default EmotionThemeProvider;
 
-after making thes to configurations we can add the decorator to the .storybook/preview.js
+after making these configurations we can add the decorator to the .storybook/preview.js
 
     +   import { addDecorator } from "@storybook/react";
     +   import EmotionThemeProvider from "./decorator";
@@ -81,7 +83,7 @@ after making thes to configurations we can add the decorator to the .storybook/p
 
     // rest of file....
 
-Now I have to add react-router-dom to storybook, by adding a decorator with the MemoryROuter from react-router-dom, into the .storybook/preview.js file.
+Now I have to add react-router-dom to Storybook, by adding a decorator with the MemoryROuter from react-router-dom, into the .storybook/preview.js file.
 
     import { MemoryRouter } from "react-router";
 
@@ -93,31 +95,50 @@ Now I have to add react-router-dom to storybook, by adding a decorator with the 
 
 #### Header component
 
-For this Project we will build a very simple Header components.
+For this project, we will build a very simple Header component.
 The Header component has 3 main components.
 Menu, Hamburger, Logo
 
-This can be previewed using storybook.
+This can be previewed using Storybook.
 
-The logo Components is just a placehoder for now,
+The logo Components is just a placeholder for now,
 The Hamburger button has animations.
-Menu is set as a column with a different font-size, color and background-color for the mobile view.
+The menu is set as a column with different font sizes, colors, and background colors for the mobile view.
 
 ---
 
 ---
 
-### Oct 21.
+### Oct 23.
 
 - Signup Page
 - Server Signup logic
 - Confirmation Page
-- Signin Page
-- Server Signin logic
+- Sign in Page
+- Server Sign in logic
+- Signout client and server Logic
 
 ---
 
-In order to maintain users authentication state, Im using Context to pass they current user authentication to the Header Component, to the Signin and Signup Components, and to the Future Private Component.
+In order to maintain users' authentication state, Im using Context to pass the current user authentication to the Header Component, to the Sign in and Signup Components, and to the Future Private Component.
 
-The authentication data is saved in the browser cookie and in the browsers local-storage.
-the auth-helpers file. has the methods to add the data to the local-storage and cookies and also to get the data, and delete the data when the user signs out of the app.
+The authentication data is saved in the browser cookie and in the browser's local storage.
+the auth-helpers file. has the methods to add the data to the local storage and cookies and also to get the data, and delete the data when the user signs out of the app.
+
+---
+
+They in order to create an account you will have to verify your email. this is done with Sendgrid api.
+in order to make this functionality work you have to make a .env file with the SendGrid key
+
+    SENDGRID_API_KEY=<Key>
+
+---
+
+---
+
+### Oct 24
+
+- User Avatar
+- User Profile read page
+- User Profile update page
+- User Delete Profile logic

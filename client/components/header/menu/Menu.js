@@ -3,10 +3,12 @@ import { jsx, css } from "@emotion/react"; /** @jsx jsx */
 import { menuStyles } from "./menuStyles";
 import { Nav } from "./nav/Nav";
 
-export function Menu({ active, position }) {
+export function Menu({ active, position, userAuth, signout }) {
   return (
     <div className="menu base-grid" css={[menuStyles(active), position]}>
       <Nav
+        signout={signout}
+        userAuth={userAuth}
         position={css`
           grid-column: 1 / -1;
           grid-row: 2 / -2;

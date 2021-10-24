@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { jsx, css } from "@emotion/react"; /** @jsx jsx */
+import { AuthContext } from "../../../auth/AuthContext/AuthContext";
 import { useLocation } from "react-router-dom";
 import { Hamburger } from "../../../components/header/hamburger/Hamburger";
 import { Logo } from "../../../components/logo/Logo";
 import { Menu } from "../../../components/header/menu/Menu";
 
 function Header() {
+  const { auth, signOutHandler } = useContext(AuthContext);
   const [active, setActive] = useState(false);
   const location = useLocation();
 
@@ -24,6 +26,8 @@ function Header() {
         `}
       />
       <Menu
+        signout={signOutHandler}
+        userAuth={auth}
         active={active}
         position={css`
           grid-column: 1 / -1;
