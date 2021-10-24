@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { Hamburger } from "../../../components/header/hamburger/Hamburger";
 import { Logo } from "../../../components/logo/Logo";
 import { Menu } from "../../../components/header/menu/Menu";
+import AuthMenu from "../../../components/header/menu/AuthMenu";
 
 function Header() {
   const { auth, signOutHandler } = useContext(AuthContext);
@@ -34,6 +35,20 @@ function Header() {
           grid-row: 1 / -1;
         `}
       />
+      <AuthMenu
+        signOutHandler={signOutHandler}
+        auth={auth}
+        position={css`
+          grid-column: 2 / -2;
+          grid-row: 1 / -1;
+          align-self: center;
+          justify-self: center;
+          @media (min-width: 900px) {
+            grid-column: -3;
+          }
+        `}
+      />
+
       <Hamburger
         active={active}
         setActive={setActive}

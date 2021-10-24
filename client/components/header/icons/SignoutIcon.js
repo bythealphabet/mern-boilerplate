@@ -8,13 +8,13 @@ const style = () => {
   `;
 };
 
-function SignoutIcon() {
+function SignoutIcon(color = "salomon") {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
       viewBox="0 0 24 24"
       css={[style]}
+      fill={color}
     >
       <g>
         <g>

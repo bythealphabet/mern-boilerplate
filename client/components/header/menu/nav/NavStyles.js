@@ -3,12 +3,14 @@ import { jsx, css } from "@emotion/react"; /** @jsx jsx */
 export function navStyle() {
   return css`
     z-index: 11;
-    display: grid;
-
+    display: flex;
     @media (min-width: 900px) {
       background: transparent;
     }
 
+    .nav-auth {
+      margin-left: 1em;
+    }
     ul {
       list-style: none;
       display: flex;
@@ -53,7 +55,6 @@ export function navStyle() {
           align-items: center;
           padding: 0;
           color: var(--white);
-          margin-top: 1em;
           p {
             font-size: 1.5rem;
           }
