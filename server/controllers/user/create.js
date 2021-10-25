@@ -52,7 +52,7 @@ export const confirmation = (req, res, next) => {
     jwt.verify(token, config.jwtAcountActivation, (err, decoded) => {
       if (err) {
         return res.status(401).json({
-          error: "This acount activation link had expired",
+          error: "This acount activation link had expired,",
         });
       }
 
@@ -93,7 +93,7 @@ export const confirmation = (req, res, next) => {
 
           if (user.isVerified) {
             return res.status(400).send({
-              message: "This Email has already been verified, Sign In",
+              message: "This Email has already been verified, Please Sign In",
             });
           }
         }

@@ -142,3 +142,13 @@ in order to make this functionality work you have to make a .env file with the S
 - User Profile read page
 - User Profile update page
 - User Delete Profile logic
+
+Finished with this part of the project.
+
+---
+
+---
+
+### Oct 25
+
+Boiler plate is Completed, I will be updating and refactoring code from this boilerplate project.
