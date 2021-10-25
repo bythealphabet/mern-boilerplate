@@ -14,6 +14,8 @@ import Home from "./containers/core/Home";
 import Signup from "./containers/user/Signup";
 import Signin from "./containers/user/Signin";
 import Confirmation from "./containers/user/Confirmation";
+import Profile from "./containers/user/Profile";
+import PrivateRoute from "./containers/user/PrivateRoute";
 
 const ScrollToTop = withRouter(scrollToTop);
 
@@ -42,6 +44,9 @@ function MainRouter() {
           <Route exact path="/">
             <Home />
           </Route>
+          <PrivateRoute path="/profile">
+            <Profile />
+          </PrivateRoute>
           <Route path="/signup">
             <Signup />
           </Route>

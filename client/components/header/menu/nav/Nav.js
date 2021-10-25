@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { navStyle } from "./NavStyles";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../../auth/AuthContext/AuthContext";
 
 export function Nav({ position }) {
+  const { auth } = useContext(AuthContext);
   return (
     <nav css={[navStyle, position]}>
       <ul>
@@ -18,6 +20,20 @@ export function Nav({ position }) {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
+        {!auth && (
+          <>
+            <li>
+              <Link className="nav-btn" to="/signin">
+                Sign In
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-btn nav-btn-signup" to="/signup">
+                Sign up
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

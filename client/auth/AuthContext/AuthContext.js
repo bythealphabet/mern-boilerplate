@@ -35,7 +35,6 @@ function AuthProvider({ children }) {
     await updateAuthUser(data);
 
     await setAuth((prev) => {
-      console.log("prev", prev);
       prev.user = data;
       return prev;
     });
@@ -46,7 +45,6 @@ function AuthProvider({ children }) {
   }
 
   async function signInHandler(data) {
-    console.log("data", data);
     await authenticate(data);
     await setAuth(data);
 

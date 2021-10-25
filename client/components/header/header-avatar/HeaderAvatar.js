@@ -13,20 +13,22 @@ const style = css`
 
   .dropdown-content {
     z-index: 20;
-    /* display: none; */
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    min-height: 200px;
+    /* min-height: 200px; */
 
     transform: translateX(-50%);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
-    div {
+    button,
+    a {
       color: black;
-      padding: 12px 16px;
+      padding: 0.5em 1em;
       text-decoration: none;
       display: block;
+      text-align: center;
 
       :hover {
         background-color: #f1f1f1;

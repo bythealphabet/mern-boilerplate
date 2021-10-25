@@ -29,10 +29,13 @@ const auth = {
     signout().then(() => {
       document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     });
+
+    return false;
   },
 
   updateAuthUser(userUpdate) {
     if (typeof window == "undefined") return;
+
     let user = JSON.parse(localStorage.getItem("user"));
     if (!user) return;
     user = userUpdate;

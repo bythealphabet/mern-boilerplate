@@ -41,7 +41,8 @@ export function GlobalStyles() {
         }
 
         ////////////BUTTONS
-        .btn {
+        .btn,
+        .base-btn {
           display: inline-block;
           padding: 0.5em 1.2em;
           font-size: 0.8rem;
