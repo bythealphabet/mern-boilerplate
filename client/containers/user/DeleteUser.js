@@ -10,7 +10,7 @@ import { usePost } from "../../hooks/useFetch";
 
 function DeleteUser({ modalActive = false, setModalActive }) {
   const [password, inputHandler] = useFormData();
-  const [fetchedData, onSubmit] = usePost();
+  const [fetchedData, onSubmit, message, success, error] = usePost();
   const history = useHistory();
   const { auth } = useContext(AuthContext);
 
@@ -25,12 +25,17 @@ function DeleteUser({ modalActive = false, setModalActive }) {
 
     console.log("data", await data);
   }
+
+  console.log("error", error);
   return modalActive ? (
     <Modal active={modalActive} setModalActive={setModalActive}>
       <div className="delete-account-box">
         <p className="why">Are you sure you want to delete your acount?</p>
         <p className="ok">if so...</p>
-        <p className="go-ahead">click the red button</p>
+        <p className="go-ahead">
+          add your current password and click the red button
+        </p>
+
         <form action="" onSubmit={submit}>
           <Input
             label="Password for authorization"
@@ -41,10 +46,19 @@ function DeleteUser({ modalActive = false, setModalActive }) {
               font-size: var(--bodySize);
             `}
           />
+          {error ? (
+            <p
+              css={css`
+                color: var(--danger);
+              `}
+            >
+              {message}
+            </p>
+          ) : null}
           <button
             className="base-btn are-u-sure-btn"
             css={css`
-              background: red;
+              background: var(--danger);
               color: var(--white);
               border: solid 2px var(--light);
               width: 100%;
