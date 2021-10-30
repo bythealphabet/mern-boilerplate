@@ -1,6 +1,5 @@
 import React from "react";
 import { jsx, css } from "@emotion/react"; /** @jsx jsx */
-import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 
 function styles(active) {
   return css`

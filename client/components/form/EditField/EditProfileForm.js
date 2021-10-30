@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { jsx, css } from "@emotion/react"; /** @jsx jsx */
 import { Input } from "../FormComponents/Input";
 import { SubmitBtn } from "../FormComponents/SubmitBtn";
-import Modal from "../../modal/Modal";
+import DeleteUser from "../../../containers/user/DeleteUser";
+import { usePost } from "../../../hooks/useFetch";
 
 function style() {
   return css`
@@ -82,44 +83,8 @@ function EditField({ onSubmit, inputHandler }) {
         >
           Delete Acount
         </button>
-        {modalActive && (
-          <Modal active={modalActive} setModalActive={setModalActive}>
-            <div className="delete-account-box">
-              <p className="why">
-                Are you sure you want to delete your acount?
-              </p>
-              <p className="ok">if so...</p>
-              <p className="go-ahead">
-                add your current password and click the red button
-              </p>
-              <form action="">
-                <Input
-                  label="Password for authorization"
-                  change={inputHandler("password")}
-                  placeholder="password "
-                  type="password"
-                  placeholderStyle={css`
-                    font-size: var(--bodySize);
-                  `}
-                />
-                <button
-                  className="base-btn are-u-sure-btn"
-                  css={css`
-                    background: red;
-                    color: var(--white);
-                    border: solid 2px var(--light);
-                    width: 100%;
-                    max-width: 420px;
-                    font-weight: 700;
-                  `}
-                >
-                  DELETE YOUR ACCOUNT{" "}
-                </button>
-              </form>
-            </div>
-          </Modal>
-        )}
       </div>
+      <DeleteUser modalActive={modalActive} setModalActive={setModalActive} />
     </div>
   );
 }

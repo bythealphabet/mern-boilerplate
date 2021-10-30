@@ -63,7 +63,7 @@ const remove = ({ userId, token, password }) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ password: password }),
+    body: JSON.stringify(password),
   })
     .then((response) => {
       return response.json();
