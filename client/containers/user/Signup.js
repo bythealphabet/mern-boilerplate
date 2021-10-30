@@ -43,6 +43,9 @@ function Signup() {
         />
       ) : (
         <AuthFormComponent
+          message={message}
+          error={error}
+          signObj={{ name: "", email: "", password: "" }}
           onSubmit={submit}
           position={css`
             grid-column: 1 / -1;

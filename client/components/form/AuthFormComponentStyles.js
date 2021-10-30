@@ -2,21 +2,31 @@ import { jsx, css } from "@emotion/react"; /** @jsx jsx */
 
 export const styles = css`
   display: grid;
-  grid-template-rows: 200px repeat(2, minmax(200px, 1fr));
+  grid-template-rows: 100px 100px repeat(2, minmax(200px, 1fr));
 
   height: 70vh;
   margin-bottom: 4em;
 
   h1 {
     grid-column: 2 / -2;
-    grid-row: 1;
+    grid-row: 1 / span 2;
     align-self: center;
     justify-self: center;
   }
 
+  .auth-form-error-message {
+    grid-column: 2 / -2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: flex-end;
+    margin-bottom: 2em;
+
+    color: var(--danger);
+  }
+
   form {
     grid-column: 2 / -2;
-    grid-row: 2 / span 2;
+    grid-row: 3 / span 2;
 
     @media (min-width: 900px) {
       min-width: 400px;

@@ -5,11 +5,14 @@ import { SubmitBtn } from "./FormComponents/SubmitBtn";
 import useFromData from "../../hooks/useFormData";
 import { styles } from "./AuthFormComponentStyles";
 
-function AuthFormComponent({ signin = false, onSubmit = () => {}, position }) {
-  let signObj = signin
-    ? { email: "", password: "" }
-    : { name: "", email: "", password: "" };
-
+function AuthFormComponent({
+  signin = false,
+  onSubmit,
+  signObj,
+  position,
+  message,
+  error,
+}) {
   const [data, inputHandler] = useFromData(signObj);
 
   const submit = (e) => {
@@ -24,7 +27,11 @@ function AuthFormComponent({ signin = false, onSubmit = () => {}, position }) {
 
   return (
     <div className="base-grid" css={[styles, position]}>
+      <div className="other-option">
+        &#x2190; <OtherAuthOption />
+      </div>
       <h1>{title(signin)}</h1>
+      {error && <p className="auth-form-error-message">{message}</p>}
       <form action="" onSubmit={submit}>
         {!signin && (
           <Input
@@ -55,9 +62,6 @@ function AuthFormComponent({ signin = false, onSubmit = () => {}, position }) {
           <OtherAuthOption />
         </p>
       </form>
-      <div className="other-option">
-        &#x2190; <OtherAuthOption />
-      </div>
     </div>
   );
 }

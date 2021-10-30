@@ -78,7 +78,7 @@ export const usePost = () => {
   ////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////
 
-  async function onSubmit(api, dataObj, cb) {
+  async function onSubmit(api, dataObj) {
     try {
       const data = await api(dataObj);
 

@@ -18,6 +18,7 @@ export function GlobalStyles() {
           --blue: rgba(81, 127, 164, 1);
           --accent: #009e8f;
           --white: #ffff;
+          --danger: #ff0e0e;
         }
 
         body,
