@@ -8,12 +8,13 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf ./dist",
-    "update": "npm run clean && ",
+    "update": "npm run clean && npm run build && npm run pmstart",
     "dev": "nodemon",
     "build": "webpack --config ./build-utils/webpack.prod.js && webpack --mode=production --config ./build-utils/webpack.server.js",
     "start": "NODE_ENV=production node ./dist/server.generated.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "pmstart": "pm2 restart mern-boilerplate"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
